@@ -100,8 +100,6 @@ body {
 }
 .s-main {
   min-height: 300px;
-  margin-top: 15px;
-  margin-bottom: 30px;
 }
 .s-main__wrapper {
   margin-top: 15px;
@@ -130,7 +128,7 @@ body {
 }
 .container {
   width: 100%;
-  max-width: 1380px;
+  max-width: 1220px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
@@ -149,9 +147,6 @@ body {
 }
 .visible {
   display: block !important;
-}
-a:hover {
-  text-decoration: underline;
 }
 .text-center {
   text-align: center !important;
@@ -198,33 +193,6 @@ h3 {
   bottom: 0;
 }
 /* ---------------- Misc ---------------- */
-.mt-0 {
-  margin-top: 0;
-}
-.mt-12 {
-  margin-top: 12px;
-}
-.mb-0 {
-  margin-bottom: 0 !important;
-}
-.mb-5 {
-  margin-bottom: 6px;
-}
-.mb-10 {
-  margin-bottom: 10px;
-}
-.mb-15 {
-  margin-bottom: 16px;
-}
-.mb-20 {
-  margin-bottom: 20px;
-}
-.mb-25 {
-  margin-bottom: 25px;
-}
-.mb-30 {
-  margin-bottom: 30px;
-}
 .center {
   display: flex;
   justify-content: center;
@@ -670,6 +638,12 @@ h3 {
   vertical-align: middle;
 }
 /* ---------------- Other---------------- */
+.text {
+  color: blue;
+}
+.text--red {
+  color: red;
+}
 .tabs__tab {
   display: none !important;
 }
@@ -729,9 +703,6 @@ h3 {
   body {
     min-width: 320px;
   }
-  .s-main {
-    margin-top: 13px;
-  }
   .s-main__wrapper {
     padding-left: 0;
   }
@@ -766,10 +737,6 @@ h3 {
 }
 /* #m600 */
 @media (max-width: 619px) {
-  .s-main {
-    margin-top: 10px;
-    margin-bottom: 15px;
-  }
   .title {
     font-size: 17px;
   }
@@ -785,6 +752,76 @@ h3 {
 }
 /* --- Main ---*/
 /* ---------------- Header ---------------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 137px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.header__column {
+  display: flex;
+  flex-direction: column;
+}
+.header__column--1 {
+  width: 11.5%;
+}
+.header__logo {
+  width: 100%;
+  height: 100%;
+}
+.header__column--2 {
+  justify-content: center;
+  align-items: flex-end;
+  width: 80%;
+}
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__row--1 {
+  width: 31%;
+  margin-bottom: 20px;
+}
+.header__row--2 {
+  width: 90%;
+}
+.header__row-top-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 227px;
+  height: 44px;
+  margin-left: 35px;
+  border: 1px solid #DBA069;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+.header__row-top-link span {
+  color: #fff;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.header__link {
+  width: fit-content;
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+}
+.header__link:hover:after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  background: #DBA069;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+}
 /* #m1300 */
 /* #m1200 */
 /* #m1100 */
@@ -1182,5 +1219,99 @@ h3 {
     font-size: 14px;
   }
 }
+/* ---------------- Intro-block ---------------- */
+.intro-block {
+  width: 100%;
+  padding-top: 252px;
+  padding-bottom: 150px;
+  background-image: url('/img/bg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.intro-block__columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.intro-block__column {
+  display: flex;
+  flex-direction: column;
+}
+.intro-block__column--1 {
+  width: 74%;
+}
+.intro-block__column--2 {
+  padding-top: 15px;
+  width: 22%;
+}
+.intro-block__title {
+  margin-bottom: 20px;
+  font-size: 38px;
+  font-weight: bold;
+  color: #fff;
+}
+.intro-block__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 245px;
+  height: 65px;
+  margin-bottom: 40px;
+  background: #DBA069;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+.intro-block__button:hover {
+  background: #fff;
+}
+.intro-block__description {
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+}
+.intro-block__description-list,
+.intro-block__description-item {
+  display: flex;
+}
+.intro-block__description-item:not(:last-child) {
+  margin-right: 25px;
+}
+.intro-block__description-number {
+  height: fit-content;
+  margin-right: 20px;
+  font-size: 128px;
+  color: #fff;
+  line-height: 0.9;
+}
+.intro-block__description-text {
+  width: 116px;
+  font-size: 20px;
+  color: #fff;
+}
+.intro-block__description-text span {
+  font-size: 50%;
+  vertical-align: top;
+}
+.intro-block__text {
+  font-size: 16px;
+  color: #fff;
+}
+.intro-block__text:not(:last-child) {
+  margin-bottom: 25px;
+}
+/* #m1300 */
+/* #m1200 */
+/* #m1100 */
+/* #m900 */
+/* #m800 */
+/* #m700 */
+/* #m600 */
+/* #m500 */
+/* #m400 */
+/* #m400 */
+/* #m300 */
 /* --- Fonts --- */
 /* --- Colors --- */
